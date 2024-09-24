@@ -1,0 +1,66 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Iinc",
+      "-o",
+      "obj/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/adel/Programming/CProjects/AstroScript",
+    "file": "/home/adel/Programming/CProjects/AstroScript/src/main.c",
+    "output": "/home/adel/Programming/CProjects/AstroScript/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Iinc",
+      "-o",
+      "obj/reader.o",
+      "src/reader.c"
+    ],
+    "directory": "/home/adel/Programming/CProjects/AstroScript",
+    "file": "/home/adel/Programming/CProjects/AstroScript/src/reader.c",
+    "output": "/home/adel/Programming/CProjects/AstroScript/obj/reader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Iinc",
+      "-o",
+      "obj/processing.o",
+      "src/processing.c"
+    ],
+    "directory": "/home/adel/Programming/CProjects/AstroScript",
+    "file": "/home/adel/Programming/CProjects/AstroScript/src/processing.c",
+    "output": "/home/adel/Programming/CProjects/AstroScript/obj/processing.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Iinc",
+      "-o",
+      "obj/interpolation.o",
+      "src/interpolation.c"
+    ],
+    "directory": "/home/adel/Programming/CProjects/AstroScript",
+    "file": "/home/adel/Programming/CProjects/AstroScript/src/interpolation.c",
+    "output": "/home/adel/Programming/CProjects/AstroScript/obj/interpolation.o"
+  }
+]
