@@ -7,6 +7,9 @@
 #include "logger.h"
 #include "interpolation.h"
 
+static const uint64_t minuteSeconds = 60;
+static const uint64_t hourSeconds = 3600;
+
 /* Максимальное кол-во секунд, когда измерения уже не будут усредняться. */
 static const uint64_t deltaSeconds = 50;
 /* Число зарезервированных элементов для временного массива. */
@@ -124,13 +127,17 @@ double secondsToRadians(double seconds) {
     double hours, degrees;
     uint64_t hour, minute;
 
-    hour = trunc(seconds / 3600.0);
-    seconds -= hour * 3600;
+    /* Сначала переведем общие секунды в часы, минуты и секунды. */
+    hour = trunc(seconds / (double) hourSeconds);
+    seconds -= hour * hourSeconds;
 
-    minute = trunc(seconds / 60.0);
-    seconds -= minute * 60;
-
-    hours = hour + minute / 60.0 + seconds / 3600.0;
+    minute = trunc(seconds / (double) minuteSeconds);
+    seconds -= minute * minuteSeconds;
+    
+    /* Переведем в доли часов. */
+    hours = hour + minute / (double) minuteSeconds + seconds / (double) hourSeconds;
+    
+    /* Переведем часовую величину в угловую. */
     degrees = hours * (15.0);
  
     return degrees * (M_PI / 180.0);

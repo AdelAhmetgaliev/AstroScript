@@ -10,6 +10,9 @@
 /* Разделители, используемые в функции readFileAndFillArrays(). */
 static const char delims[] = {' ', '\n', '\0'};
 
+static const uint64_t minuteSeconds = 60;
+static const uint64_t hourSeconds = 3600;
+
 /* Переводит строку формата времени в секунды. */
 static uint64_t strTimeToSeconds(const char* const strTime);
 
@@ -142,5 +145,5 @@ static uint64_t strTimeToSeconds(const char* const strTime) {
     uint64_t hours, minutes, seconds;
     sscanf(strTime, "%02lu:%02lu:%02lu", &hours, &minutes, &seconds);
 
-    return hours * 3600 + minutes * 60 + seconds;
+    return hours * hourSeconds + minutes * minuteSeconds + seconds;
 }

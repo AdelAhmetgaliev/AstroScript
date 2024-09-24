@@ -23,9 +23,10 @@ uint64_t getMeanSolarTime(uint64_t seconds) {
     double tempSeconds = (double) seconds;
     double longitudeSeconds = longitude / 360.0 * 24.0 * (double) hourSeconds;
 
-    tempSeconds = 
+    tempSeconds =
         tempSeconds - 3.0 * (double) hourSeconds + longitudeSeconds - 1.0 * (double) hourSeconds;
 
+    /* Если вышли за границы одних суток, то возвращаем. */
     if (tempSeconds < 0.0)
         tempSeconds += (double) daySeconds;
 
@@ -36,7 +37,7 @@ uint64_t getMeanSolarTime(uint64_t seconds) {
 }
 
 uint64_t getSiderialTime(uint64_t meanSolarSeconds) {
-    double tempResult = 
+    double tempResult =
         siderialTime * (double) hourSeconds + translationConst * (double) meanSolarSeconds;
 
     return round(tempResult);

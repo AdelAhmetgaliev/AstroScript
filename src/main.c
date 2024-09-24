@@ -16,7 +16,7 @@
 #include "datetime.h"
 #include "config.h"
 
-/* Зарезервируем 1000 элементов для каждого из массивов. */
+/* Зарезервируем 100 элементов для каждого из массивов. */
 #define ARRAY_BUFFER_SIZE 100
 
 /* Название файла, куда будут записываться промежуточные вычисления. */
@@ -194,6 +194,7 @@ int main(void) {
         double declinationRadians = degreesToRadians(declination);
         double hourAngleRadians = secondsToRadians(dHourAngleSeconds);
 
+        /* Упрощенная модель плоско-параллельной атмосферы. */
         double airMass =
             1 / (sin(latitudeRadians) * sin(declinationRadians) +
              cos(latitudeRadians) * cos(declinationRadians) * cos(hourAngleRadians));
