@@ -257,18 +257,18 @@ int main(void) {
         return EXIT_FAILURE;
     }
     
+    fprintf(pOutputFile, "# Зависимость коэффцициента экстинкции от времени.\n");
+    fprintf(pOutputFile, "# Время\t\tКоэфф. экстинкции\n");
     for (size_t i = 0; i < compArrRowCount - 1; ++i) {
-        uint64_t hour1, minute1, second1;
-        secondsToTime(compArr[i][0], &hour1, &minute1, &second1);
+        uint64_t averageSeconds = round((double)(compArr[i][0] + compArr[i + 1][0]) / 2.0);
 
-        uint64_t hour2, minute2, second2;
-        secondsToTime(compArr[i + 1][0], &hour2, &minute2, &second2);
+        uint64_t hour, minute, second;
+        secondsToTime(averageSeconds, &hour, &minute, &second);
 
-        if (second1 >= 30) minute1 += 1;
-        if (second2 >= 30) minute2 += 1;
+        if (second >= 30) minute += 1;
 
-        fprintf(pOutputFile, "%02lu:%02lu - %02lu:%02lu\t%.3f\n",
-                hour1, minute1, hour2, minute2, extinctionCoeffArr[i]);
+        fprintf(pOutputFile, "  %02lu:%02lu\t\t%.3f\n",
+                hour, minute, extinctionCoeffArr[i]);
     }
 
     log_info("Завершение программы. Код возврата: %d.", EXIT_SUCCESS);
