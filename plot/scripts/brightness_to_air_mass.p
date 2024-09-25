@@ -9,12 +9,7 @@ set yrange [:]
 set grid
 set key top right
 
-set fit nolog
-f(x) = a * x + b
-fit f(x) "../data/brightness_to_air_mass.dat" via a, b
-
 set output "brightness_to_air_mass.png"
 
-plot "../data/brightness_to_air_mass.dat" title "m(M)" with points ls 7 ps 2.5, \
-    f(x) title "y = a * x + b" with line ls 9
+plot "../data/brightness_to_air_mass.dat" title "m(M)" with points ls 7 ps 2.5
 
