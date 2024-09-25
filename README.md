@@ -28,7 +28,7 @@
 
 График зависимости блеска звезды от воздушной массы:
 <picture>
-  <img src="https://github.com/user-attachments/assets/526f7f11-4451-4183-87be-d7aad5223bf0">
+  <img width="500" src="https://github.com/user-attachments/assets/526f7f11-4451-4183-87be-d7aad5223bf0">
 </picture>
 
 График зависимости коэффциента экстинкции от времени:
