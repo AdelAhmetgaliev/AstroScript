@@ -42,6 +42,6 @@
   <img
     title="График зависимости коэффциента экстинкции от времени."
     width="700"
-    src="https://github.com/user-attachments/assets/c220d5f0-188a-4a3b-8a7e-379211b9904b"
+    src="https://github.com/AdelAhmetgaliev/AstroScript/blob/master/plot/extinction_coeff.png"
   >
 </picture>
