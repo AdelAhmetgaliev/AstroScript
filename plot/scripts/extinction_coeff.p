@@ -11,7 +11,7 @@ set ylabel "Коэффициент экстинкции α"
 set yrange [:]
 
 set grid
-set key top right
+set key top right box opaque
 
 set output "extinction_coeff.png"
 

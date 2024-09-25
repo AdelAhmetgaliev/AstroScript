@@ -7,7 +7,7 @@ set ylabel "Блеск звезды m"
 set yrange [:]
 
 set grid
-set key top right
+set key top right box opaque
 
 set output "brightness_to_air_mass.png"
 
