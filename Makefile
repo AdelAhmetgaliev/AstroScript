@@ -1,9 +1,9 @@
 CC = gcc
 TARGET = bin/AstroScript
 
-IDIR = inc
-ODIR = obj
 SDIR = src
+IDIR = $(SDIR)/inc
+ODIR = obj
 
 CFLAGS = -g -Wall -Wextra -I$(IDIR) -DLOGGER
 LIBS = -lm
