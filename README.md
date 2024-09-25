@@ -33,7 +33,7 @@
   <img
     title="График зависимости блеска звезды от воздушной массы."
     width="700"
-    src="https://github.com/user-attachments/assets/526f7f11-4451-4183-87be-d7aad5223bf0"
+    src="https://github.com/AdelAhmetgaliev/AstroScript/blob/master/plot/brightness_to_air_mass.png"
   >
 </picture>
 
