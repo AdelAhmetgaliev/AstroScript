@@ -4,7 +4,7 @@ set xlabel "Воздуш. масса M"
 set xrange [:]
 
 set ylabel "Блеск звезды m"
-set yrange [:]
+set yrange [:] reverse
 
 set grid
 set key top right box opaque
