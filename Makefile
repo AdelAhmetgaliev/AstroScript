@@ -17,8 +17,14 @@ OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
-$(ODIR)/%.o: $(SDIR)/%.c $(HEADS)
+$(ODIR)/%.o: $(SDIR)/%.c $(HEADS) obj bin
 	$(CC) -c -o $@ $< $(CFLAGS)
+
+bin:
+	mkdir $@
+
+obj:
+	mkdir $@
 
 .PHONY: clean
 
