@@ -7,7 +7,7 @@
 static const uint64_t minuteSeconds = 60;
 static const uint64_t hourSeconds = 3600;
 static const uint64_t daySeconds = 86400;
-static const double translationConst = 1.0027309093;
+static const double translationConst = 1.0027379093;
 
 void secondsToTime(uint64_t seconds, uint64_t* hour, uint64_t* minute, uint64_t* second) {
     *hour = seconds / hourSeconds;
