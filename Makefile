@@ -7,8 +7,8 @@ ODIR = obj
 SDIR = src
 IDIR = $(SDIR)/inc
 
-CFLAGS = -O3 -Wall -Wextra -I$(IDIR) -DLOGGER
-LFLAGS = -fuse-ld=lld -flto -lm
+CFLAGS = -O3 -Wall -Wextra -I$(IDIR) -DLOGGER -fstack-protector-all -fpie
+LFLAGS = -fuse-ld=lld -flto -lm -s -Wl,-z,relro,-z,now
 
 _HEADS = logger.h reader.h processing.h interpolation.h datetime.h config.h
 HEADS = $(patsubst %,$(IDIR)/%,$(_HEADS))
